@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+  --primary: #0f766e;
+  --primary-light: #14b8a6;
+  --accent: #d97706;
+  --surface: #fafaf9;
+  --surface-card: #ffffff;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  background: var(--surface);
+  color: #1c1917;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+  }
+  .btn-secondary {
+    @apply border border-stone-300 bg-surface-card text-stone-700 hover:bg-stone-50 focus:ring-stone-400;
+  }
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-amber-600 focus:ring-amber-500;
+  }
+  .card {
+    @apply rounded-xl border border-surface-border bg-surface-card shadow-sm;
+  }
+  .input {
+    @apply w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-stone-800 placeholder-stone-400 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
+  }
+}
