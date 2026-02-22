@@ -1,2 +1,2 @@
 # Civic-complaint-api
-Its a fronend project.
+Its a frontend project.
